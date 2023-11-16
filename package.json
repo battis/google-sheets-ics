@@ -1,7 +1,7 @@
 {
   "name": "google-sheets-ics",
   "version": "0.1.0",
-  "description": "",
+  "description": "Generate an ICS feed from a Google Sheet",
   "main": "src/index.ts",
   "scripts": {
     "build": "webpack",
