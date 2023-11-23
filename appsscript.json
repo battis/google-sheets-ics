@@ -3,12 +3,27 @@
   "dependencies": {},
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Spreadsheet ICS",
+      "logoUrl": "https://battis.github.io/spreadsheet-ics/marketplace/logo-120px.png",
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      }
+    },
+    "sheets": {}
+  },
   "webapp": {
-    "executeAs": "USER_DEPLOYING",
-    "access": "ANYONE_ANONYMOUS"
+    "executeAs": "USER_ACCESSING",
+    "access": "ANYONE"
   },
   "oauthScopes": [
     "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/script.container.ui",
     "https://www.googleapis.com/auth/spreadsheets"
+  ],
+  "urlFetchWhitelist": [
+    "https://script.google.com/",
+    "https://github.com/battis/spreadsheet-ics"
   ]
 }
