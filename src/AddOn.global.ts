@@ -48,6 +48,12 @@ function openUrl(url) {
 export function onHomepage() {
   return g.CardService.Card.create({
     name: 'Spreadsheet ICS',
-    widgets: ['Stuff and things']
+    widgets: [
+      JSON.stringify(
+        PropertiesService.getUserProperties().getProperties(),
+        null,
+        2
+      )
+    ]
   });
 }
